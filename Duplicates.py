@@ -1,19 +1,7 @@
 import os
-import zipfile
 import pickle
 import re
 
-# база id из поисковика в нашу реальность
-
-
-machineDirectory = "D:\\BANKI_QA\\files\\"
-#
-# def updateID(test):
-#     base=[]
-#     bfile = open("base", "rb")
-#     bfile.read(base)
-#     bfile.close()
-#     return list(map(lambda x: base[x], test))
 
 def main():
     files = list(filter(lambda x: ('hdr' in x), os.listdir(machineDirectory)))

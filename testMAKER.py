@@ -23,13 +23,18 @@ def main():
     # print (test)
 
     result = reverseRepeater(test)
-
-    for e in result:
-        c = input(e['q'] + "\n" + e['a'] + "\n\n" + "(" + str(result.index(e)) + "/" + str(len(result)) + ")" + " Это подходит? (y/n): ")
-        if c == 'y':
-            for id in e['id']:
-                file.write(id+"\n")
-            file.write("\n")
+    it = 0
+    while it != len(result):
+        e = result[it]
+        c = input(e['q'] + "\n" + e['a'] + "\n\n" + "(" + str(result.index(e)) + "/" + str(len(result)) + ")" + " Это подходит? (y/n/b): ")
+        if c == "b":
+            it -= 1
+        else:
+            if c == 'y':
+                for id in e['id']:
+                    file.write(id+"\n")
+                file.write("\n")
+            it += 1
 
     file.close()
 

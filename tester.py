@@ -117,7 +117,7 @@ def main():
         ALL = 541588 #Todo научиться находить общее число документов при особых запросах
         # Todo удалить повторы
         f = open(testfldr+test)
-        res = req(f.readline(), f.readline(),  f.readline() == "True") # req, softOR, стоп-слова
+        res = req(f.readline().replace("\n", ""), f.readline().replace("\n", ""), "True" in f.readline() ) # req, softOR, стоп-слова
         f.readline()
         # if "text" in f.readline():
         #     res = req(f.readline())

@@ -12,7 +12,7 @@ def maketest(quer, softOr, stop, base ):
     #         size = 1
     #     else:
     #         size = 0
-    test = getQA(res)  # получены в ответ id, тексты вопросов и ответов
+    # test = getQA(res)  # получены в ответ id, тексты вопросов и ответов
     file = open(testfldr + "test-" + str(len(quer)) + "-softOR=" + str(softOr) + "-filt=" + \
                 stop.replace("\n", "") + " " + quer[0:20] + ".txt", "w")
     file.write(quer + "\n")
@@ -40,7 +40,7 @@ def maketest(quer, softOr, stop, base ):
                   str(result.index(e)+1) + "/" + str(len(result)) + ")" + " Это подходит? (y/n/b): ")
         if c == "b":
             it -= 1
-            tofile.pop
+            tofile.pop()
         else:
             if c == 'y':
                 tofile.append(e['groupid'])

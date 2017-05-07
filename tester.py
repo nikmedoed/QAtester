@@ -80,7 +80,7 @@ def reverseRepeater(test):
         result.append({'id': [elem['id']], 'q': elem['q'], 'a': elem['a']})
         i = 0
         while i < len(test):
-            if elem['a'] == test[i]['a']:
+            if elem['q'] == test[i]['q']:
                 result[len(result)-1]['id'].append(test[i]['id'])
                 del test[i]
             else:

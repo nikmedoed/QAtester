@@ -20,13 +20,12 @@
           <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tester.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+                <state relative-caret-position="150">
+                  <caret line="165" column="28" lean-forward="true" selection-start-line="165" selection-start-column="28" selection-end-line="165" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#284#1045#0" expanded="false" />
-                    <element signature="e#1159#1534#0" expanded="false" />
-                    <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+                    <element signature="e#653#1414#0" expanded="false" />
+                    <element signature="e#1529#1904#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -35,8 +34,8 @@
           <file leaf-file-name="SearchEngine.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SearchEngine.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+                <state relative-caret-position="133">
+                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -44,23 +43,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="testMAKER.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/testMAKER.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#0#20#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="makeBase.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="makeBase.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/makeBase.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="538">
-                  <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+                <state relative-caret-position="170">
+                  <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -130,13 +117,39 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="SearchEngine.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="SearchEngine.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SearchEngine.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+                <state relative-caret-position="105">
+                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="testMAKER.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/testMAKER.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#0#20#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tester.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="371">
+                  <caret line="135" column="61" lean-forward="false" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                    <element signature="e#653#1414#0" expanded="false" />
+                    <element signature="e#1529#1904#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -156,7 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>json</find>
       <find>ran</find>
       <find>testfldr</find>
       <find>strip</find>
@@ -167,6 +179,7 @@
       <find>req</find>
       <find>index</find>
       <find>inde</find>
+      <find>json</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,8 +196,8 @@
         <option value="$PROJECT_DIR$/normalizeWords.py" />
         <option value="$PROJECT_DIR$/MakeBigBat.py" />
         <option value="$PROJECT_DIR$/SearchEngine.py" />
-        <option value="$PROJECT_DIR$/tester.py" />
         <option value="$PROJECT_DIR$/testMAKER.py" />
+        <option value="$PROJECT_DIR$/tester.py" />
       </list>
     </option>
   </component>
@@ -255,25 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MakeBigBat">
-    <configuration default="false" name="stopWordsFilter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="QAtester" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stopWordsFilter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.testMAKER">
     <configuration default="false" name="normalizeWords" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -346,6 +341,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="QAtester" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tester.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -412,19 +425,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.stopWordsFilter" />
-      <item index="1" class="java.lang.String" itemvalue="Python.normalizeWords" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MakeBigBat" />
-      <item index="3" class="java.lang.String" itemvalue="Python.testMAKER" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Duplicates" />
+      <item index="0" class="java.lang.String" itemvalue="Python.normalizeWords" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MakeBigBat" />
+      <item index="2" class="java.lang.String" itemvalue="Python.testMAKER" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Duplicates" />
+      <item index="4" class="java.lang.String" itemvalue="Python.tester" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.MakeBigBat" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testMAKER" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Duplicates" />
-        <item index="3" class="java.lang.String" itemvalue="Python.normalizeWords" />
-        <item index="4" class="java.lang.String" itemvalue="Python.stopWordsFilter" />
+        <item index="0" class="java.lang.String" itemvalue="Python.testMAKER" />
+        <item index="1" class="java.lang.String" itemvalue="Python.tester" />
+        <item index="2" class="java.lang.String" itemvalue="Python.MakeBigBat" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Duplicates" />
+        <item index="4" class="java.lang.String" itemvalue="Python.normalizeWords" />
       </list>
     </recent_temporary>
   </component>
@@ -446,14 +459,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -484,7 +496,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -499,9 +511,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#284#1045#0" expanded="false" />
-            <element signature="e#1159#1534#0" expanded="false" />
-            <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+            <element signature="e#653#1414#0" expanded="false" />
+            <element signature="e#1529#1904#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -580,9 +591,8 @@
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#284#1045#0" expanded="false" />
-            <element signature="e#1159#1534#0" expanded="false" />
-            <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+            <element signature="e#653#1414#0" expanded="false" />
+            <element signature="e#1529#1904#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,9 +661,8 @@
           <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#284#1045#0" expanded="false" />
-            <element signature="e#1159#1534#0" expanded="false" />
-            <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+            <element signature="e#653#1414#0" expanded="false" />
+            <element signature="e#1529#1904#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -684,9 +693,8 @@
           <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#284#1045#0" expanded="false" />
-            <element signature="e#1159#1534#0" expanded="false" />
-            <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+            <element signature="e#653#1414#0" expanded="false" />
+            <element signature="e#1529#1904#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -717,9 +725,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#284#1045#0" expanded="false" />
-            <element signature="e#1159#1534#0" expanded="false" />
-            <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+            <element signature="e#653#1414#0" expanded="false" />
+            <element signature="e#1529#1904#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -730,9 +737,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#284#1045#0" expanded="false" />
-            <element signature="e#1159#1534#0" expanded="false" />
-            <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+            <element signature="e#653#1414#0" expanded="false" />
+            <element signature="e#1529#1904#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -755,20 +761,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="774" column="0" lean-forward="false" selection-start-line="733" selection-start-column="0" selection-end-line="775" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Duplicates.ipynb" />
-    <entry file="file://$PROJECT_DIR$/makeBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Duplicates.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -819,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SearchEngine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        <state relative-caret-position="105">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -829,21 +826,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="371">
+          <caret line="135" column="61" lean-forward="false" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#284#1045#0" expanded="false" />
-            <element signature="e#1159#1534#0" expanded="false" />
-            <marker date="1494151377205" expanded="true" signature="2427:2614" ph="..." />
+            <element signature="e#653#1414#0" expanded="false" />
+            <element signature="e#1529#1904#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makeBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testMAKER.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        <state relative-caret-position="204">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

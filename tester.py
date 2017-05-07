@@ -6,9 +6,24 @@ from math import log2
 import datetime
 import rarfile
 from SearchEngine import *
+from Duplicates import baseread
 
 machineDirectory = "D:\\BANKI_QA\\Orignals\\"
 testfldr = "tests\\"
+
+
+def IdToGroupid (res, base):
+    real = []
+    result = []
+    for i in res:
+        for j in base:
+            if "0" + i in j['listid']:
+                if not (j['groupid'] in real):
+                    real.append(j['groupid'])
+                    result.append(j)
+                    break
+    return {'id': real, "all": result}
+
 
 def getQA(test): # по списку id возвращает список словарей с вопросами и ответами
     # files = list(filter(lambda x: x.startswith('qa') and ('hdr' in x), os.listdir(machineDirectory)))
@@ -30,6 +45,7 @@ def getQA(test): # по списку id возвращает список сло
             print (fil, "skipped")
     return id
 
+
 def reverseRepeater(test): # объединяет дубликаты в группы, т.е. остается список id, вопрос и ответ для них
     result = []
     while len(test)>0:
@@ -44,142 +60,122 @@ def reverseRepeater(test): # объединяет дубликаты в груп
                 i += 1
     return result
 
+
+def getTest(res, ALL, truRes):
+    TP = 0
+    DCG5 = 0
+    DCG10 = 0
+    DCG20 = 0
+    DCG50 = 0
+    DCG = 0
+    APres5 = 0
+    APres10 = 0
+    APres20 = 0
+    APres50 = 0
+    APres = 0
+    Cont = 0
+    IDCG = 0
+    nDCG5 = 0
+    nDCG10 = 0
+    nDCG20 = 0
+    nDCG50 = 0
+    FalsePos = []
+    for i in range(1, len(res)):
+        IDCG += 1.0 / log2(i + 1)
+        if res[i - 1] in truRes:
+            TP += 1
+            if Cont == 0:
+                MRRpart = 1.0 / i
+            Cont += 1
+            forap = Cont / i
+            fordcg = 1.0 / log2(1 + i)
+            if i <= 5:
+                DCG5 += fordcg
+                APres5 += forap
+            if 5 < i <= 10:
+                DCG10 += fordcg
+                APres10 += forap
+            if 10 < i <= 20:
+                DCG20 += fordcg
+                APres20 += forap
+            if 20 < i <= 50:
+                DCG50 += fordcg
+                APres50 += forap
+            DCG += fordcg
+            APres += forap
+        else:
+            FalsePos.append(res[i - 1])
+        if i == 5:
+            nDCG5 = DCG5 / IDCG
+        if i == 10:
+            nDCG10 = (DCG10 + DCG5) / IDCG
+        if i == 20:
+            nDCG20 = (DCG20 + DCG10 + DCG5) / IDCG
+        if i == 50:
+            nDCG50 = (DCG50 + DCG20 + DCG10 + DCG5) / IDCG
+    nDCG = DCG / IDCG
+    APres50 = (APres50 + APres5 + APres10 + APres20) / 50
+    APres20 = (APres5 + APres10 + APres20) / 20
+    APres10 = (APres5 + APres10) / 10
+    APres5 /= 5
+    if len(res) > 0:
+        APres /= len(res)
+        Precision = TP * 1.0 / len(res)
+    else:
+        APres = 0
+        Precision = 0
+    if len(truRes) > 0:
+        Recall = TP * 1.0 / len(truRes)
+    else:
+        Recall = 0
+    Accuracy = (TP + ALL - len(res) + TP - len(truRes)) / ALL
+    Error = (len(res) - TP + len(truRes) - TP) / ALL
+    if Precision == 0 or Recall == 0:
+        Fmeasure = 0
+    else:
+        Fmeasure = 2.0 / ((1.0 / Precision) + (1.0 / Recall))
+    return [TP, Precision, Recall, Accuracy, Error, Fmeasure, APres5, APres10, APres20, APres50, APres,
+            nDCG5, nDCG10, nDCG20, nDCG50, nDCG, MRRpart]
+
 def main():
-    gP=0
-    gR=0
-    gF=0
-    gA = 0
-    gE = 0
-    gnDCG=0
-    gAP=0
-    MRR=0
-    gnDCG5 = 0
-    gnDCG10 = 0
-    gnDCG20 = 0
-    gnDCG50 = 0
-    gAPres5 = 0
-    gAPres10 = 0
-    gAPres20 = 0
-    gAPres50 = 0
-    coco=0
+    base = baseread()
     resfile = "Results\\" + str(datetime.datetime.now()).replace(":", "-") + ".txt"
     file = open(resfile,"w")
-    file.write("Test name\tPrecision\tRecall\tF-measure\tAccuracy\tError\tAverage Precision (AP)\tAP@5\tAP@10\tAP@20\tAP@50\tnDCG\tnDCG@5\tnDCG@10\tnDCG@20\tnDCG@50\n")
+    file.write("Test name\tTruePositive\tPrecision\tRecall\tAccuracy\tError\tF-measure\tAPres@5\t" +
+               "APres@10\tAPres@20\tAPres@50\tAveragePres\tnDCG@5\tnDCG@10\tnDCG@20\tnDCG@50\t" +
+               "nDCG\tMRR\n")
+    globalSres = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    coco = 0
     for test in os.listdir(testfldr):
-        TP=0
         coco += 1
-        ALL = 541588 #Todo научиться находить общее число документов при особых запросах
-        # Todo удалить повторы
-        f = open(testfldr+test)
-        res = req(f.readline().replace("\n", ""), f.readline().replace("\n", ""), "True" in f.readline() ) # req, softOR, стоп-слова
-        f.readline()
-        # if "text" in f.readline():
-        #     res = req(f.readline())
-        #     f.readline()
-        # else:
-        #     res = GETQuery(f.readline())
-        #     f.readline()
+        ALL = len(base) #Todo научиться находить общее число документов при особых запросах
+        ftest = open(testfldr+test)
+        quer = ftest.readline().replace("\n", "")
+        softOR =  ftest.readline().replace("\n", "")
+        stopFilter = "True" in ftest.readline()
+        ftest.readline()
         truRes = []
-        for line in f.readlines():
-            temp =line.strip()
-            if temp in res:
-                TP += 1
-            truRes.append(temp)
-        Precision = TP*1.0 / len(res)
-        Recall = TP*1.0/ len(truRes)
-        Accuracy = (TP+ALL-len(res)+TP-len(truRes))/ALL
-        Error = (len(res)-TP+len(truRes)-TP)/ALL
-        Fmeasure = 2.0/((1.0/Precision)+(1.0/Recall))
-        #получаем res и truRes надо отправить на оценку
-        DCG5=0
-        DCG10=0
-        DCG20=0
-        DCG50=0
-        DCG=0
-        APres5=0
-        APres10=0
-        APres20=0
-        APres50=0
-        APres=0
-        Cont=0
-        IDCG=0
-        nDCG5 = 0
-        nDCG10 = 0
-        nDCG20 = 0
-        nDCG50 = 0
-        for i in range(1,len(res)):
-            IDCG += 1.0/log2(i+1)
-            if res[i-1] in truRes:
-                if Cont == 0:
-                    MRR += 1.0/i
-                Cont += 1
-                forap = Cont/i
-                fordcg = 1.0/log2(1+i)
-                if i <= 5:
-                    DCG5 += fordcg
-                    APres5 += forap
-                if i<=10:
-                    DCG10 += fordcg
-                    APres10 += forap
-                if i<=20:
-                    DCG20 += fordcg
-                    APres20 += forap
-                if i<=50:
-                    DCG50 += fordcg
-                    APres50 += forap
-                DCG += fordcg
-                APres += forap
-            if i == 5:
-                nDCG5 = DCG5 / IDCG
-            if i == 10:
-                nDCG10 = DCG10 / IDCG
-            if i == 20:
-                nDCG20 = DCG20 / IDCG
-            if i == 50:
-                nDCG50 = DCG50 / IDCG
-        nDCG = DCG / IDCG
-        APres5 /= 5
-        APres10 /= 10
-        APres20 /= 20
-        APres50 /= 50
-        APres /= len(res)
+        for line in ftest.readlines():
+            truRes.append(line.strip())
 
-        gP += Precision
-        gR += Recall
-        gA += Accuracy
-        gE += Error
-        gF += Fmeasure
-        gnDCG += nDCG
-        gAP += APres
-        gnDCG5 += nDCG5
-        gnDCG10 += nDCG10
-        gnDCG20 += nDCG20
-        gnDCG50 += nDCG50
-        gAPres5 += APres5
-        gAPres10 += APres10
-        gAPres20 += APres20
-        gAPres50 += APres50
-        file.write('\t'.join(map(str,[test, Precision, Recall, Fmeasure, Accuracy, Error, APres, APres5, APres10, APres20, APres50, nDCG, nDCG5, nDCG10, nDCG20, nDCG50]))+"\n")
-    gP /= coco
-    gR /= coco
-    gA /= coco
-    gE /= coco
-    gF /= coco
-    gnDCG /= coco
-    gAP /= coco
-    MRR /= coco
-    gnDCG5 /= coco
-    gnDCG10 /= coco
-    gnDCG20 /= coco
-    gnDCG50 /= coco
-    gAPres5 /= coco
-    gAPres10 /= coco
-    gAPres20 /= coco
-    gAPres50 /= coco
-    file.write("\nGlobal\n")
+        # тест search
+        resul = IdToGroupid (req(quer, softOR, stopFilter), base)
+        # resul состоит из двух элементов 'id' и 'all'
+        res = resul['id']
+        searchTest = getTest(res, ALL, truRes)
+        for se in range(0, len(searchTest)-1):
+            globalSres[se] += searchTest[se]
 
-    file.write('\t'.join( map(str,["ALL", gP, gR, gF, gA, gE, gAP, gAPres5, gAPres10, gAPres20, gAPres50, gnDCG, gnDCG5, gnDCG10, gnDCG20, gnDCG50])) + "\n")
-    file.write("MRR:" + str(MRR))
+        file.write(test + "\t")  # testname
+        file.write('\t'.join(searchTest)+"\n")
+    if coco > 0:
+        for i in range(0, len(globalSres) - 1):
+            globalSres[i] /= coco
+    else:
+        for i in range(0, len(globalSres) - 1):
+            globalSres[i] = 0
+    file.write("\nGlobal") #testname
+    file.write('\t'.join(globalSres) + "\n")
     file.close()
     print ("Results in " + resfile)
 

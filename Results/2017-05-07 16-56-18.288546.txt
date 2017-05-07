@@ -1,0 +1,1 @@
+Test name	TruePositive	Precision	Recall	Accuracy	Error	F-measure	APres@5	APres@10	APres@20	APres@50	AveragePres	nDCG@5	nDCG@10	nDCG@20	nDCG@50	nDCG	MRR

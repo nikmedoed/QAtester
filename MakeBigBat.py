@@ -1,7 +1,7 @@
 import os
 from multiprocessing import Process
 
-machineDirectory = "D:\\BANKI_QA\\W2V-i\\W2V-allfiles\\alltxt\\"
+machineDirectory = "D:\\BANKI_QA\\W2V-i\\alltxt_plm\\"
 dirres = "D:\\BANKI_QA\\W2Vo\\Vectors\\"
 
 def chunks(lst, chunk_size):

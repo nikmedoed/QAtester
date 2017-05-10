@@ -12,10 +12,6 @@ def maketest(testdata):
     softOr = testset['soft']
     stop = testset['stop']
     result = testset['res']
-    file = open(testdata.replace("testdata", "txt"), "w")
-    file.write(quer + "\n")
-    file.write(softOr + "\n")
-    file.write(stop + "\n")
     # print (test)
     print("Запрос: ", quer)
     print()
@@ -32,22 +28,23 @@ def maketest(testdata):
         c = input("\n\nЗапрос: \t" + quer + " (необходимо определить, отвечает ли на него пара вопрос-ответ)\nВопрос: \t" + e['q'] + "\n" + "Ответ: \t" + e['a'] + "\n\n" + "(" + \
                   str(result.index(e)+1) + "/" + str(len(result)) + ")" + " Это подходит? (y/n/b): ")
         tempfile = open(tempname, "a")
-        tempfile.write(str(it) + "\t" + str(e['groupid']) + "\t" + str(c) + "\n")
+        tempfile.write(str(it + 1) + "\t" + str(e['groupid']) + "\t" + str(c) + "\n")
         tempfile.close()
         if "set" in c:
             s = c.split(" ")[1:]
             for iter in s:
                 ite = int(iter)
-                k = result[ite]
+                k = result[ite - 1]
                 tofile.append(str(k['groupid']))
-                it = ite + 1
+                it = ite
         else:
             if "goto" in c:
-                it = int(c.split(" ")[1])
+                it = int(c.split(" ")[1])-1
             else:
                 if c == "b":
                     it -= 1
-                    tofile.pop()
+                    if len(tofile) > 0:
+                        tofile.pop()
                 else:
                     if c == 'y':
                         tofile.append(str(e['groupid']))
@@ -57,6 +54,10 @@ def maketest(testdata):
                             break
                         print("\t\tОтклонено")
                     it += 1
+    file = open(testdir + testdata.replace("testdata", "txt"), "w")
+    file.write(quer + "\n")
+    file.write(softOr + "\n")
+    file.write(stop + "\n\n")
     file.write("\n".join(tofile))
     file.close()
 

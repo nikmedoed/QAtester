@@ -1,6 +1,7 @@
 from tester import *
 from Duplicates import baseread
 import pickle
+from multiprocessing import Process
 
 
 def maketest(quer, softOr, stop, base):
@@ -26,7 +27,7 @@ def main():
         if iter >= start:
             print("test:\n" + line)
             line = line.split("\t")
-            maketest(line[0], line[1], line[2], base)
+            Process(target=maketest, args=(line[0], line[1], line[2], base)).start()
 
 if __name__ == '__main__':
     # multiprocessing.freeze_support()

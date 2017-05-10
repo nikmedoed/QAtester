@@ -11,29 +11,35 @@ def maketest(quer, softOr, stop, base):
                 stop.replace("\n", "") + " " + quer[0:20] + ".txt", "w")
     file.write(quer + "\n")
     file.write(softOr + "\n")
-    file.write(stop + "\n")
+    file.write(stop + "\n\n")
     # print (test)
     print("Запрос: ", quer)
     print()
     it = 0
     tofile = []
-    tempfile = open("temp\\temp-" + str(startlen) + " - " + str(len(result)) + " - " +
-                     str(datetime.datetime.now()).replace(":", "-") + ".txt", "w")
+
+    tempname = "temp\\temp-" + str(startlen) + " - " + str(len(result)) + " - " + \
+                     str(datetime.datetime.now()).replace(":", "-") + ".txt"
+    tempfile = open(tempname, "w")
+    tempfile.close()
+
     while it < len(result):
         e = result[it]
         c = input("\n\nЗапрос: \t" + quer + " (необходимо определить, отвечает ли на него пара вопрос-ответ)\nВопрос: \t" + e['q'] + "\n" + "Ответ: \t" + e['a'] + "\n\n" + "(" + \
                   str(result.index(e)+1) + "/" + str(len(result)) + ")" + " Это подходит? (y/n/b): ")
-        tempfile.write(str(it) + "\t" + str(e['groupid']) + "\t" + str(c) + "\n")
+        tempfile = open(tempname, "a")
+        tempfile.write(str(it-1) + "\t" + str(e['groupid']) + "\t" + str(c) + "\n")
+        tempfile.close()
         if "set" in c:
             s = c.split(" ")[1:]
             for iter in s:
                 ite = int(iter)
-                k = result[ite]
+                k = result[ite-1]
                 tofile.append(str(k['groupid']))
-                it = ite + 1
+                it = ite
         else:
             if "goto" in c:
-                it = int(c.split(" ")[1])
+                it = int(c.split(" ")[1])-1
             else:
                 if c == "b":
                     it -= 1
@@ -47,7 +53,6 @@ def maketest(quer, softOr, stop, base):
                             break
                         print("\t\tОтклонено")
                     it += 1
-    tempfile.close()
     file.write("\n".join(tofile))
     file.close()
 

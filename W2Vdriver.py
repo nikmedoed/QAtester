@@ -82,7 +82,7 @@ def Rcos (a, b):
     if c != d:
         print("Oh, NO!")
     else:
-        for i in range(0, c-1):
+        for i in range(0, c):
             x += a[i] * b[i]
             y += a[i] * a[i]
             z += b[i] * b[i]
@@ -96,14 +96,16 @@ def sortDic(dic):
     res = list(sorted(dic.values()))
     res.reverse()
     result = {}
+    resulten = []
     for i in range(0, len(res)):
         el = res[i]
         for j in dic:
             if dic.get(j) == el:
                 result.update({i: j})
+                resulten.append(j)
                 dic.pop(j)
                 break
-    return result
+    return {"dic": result, 'list': resulten}
 
 # получает список веторов из запроса и список векторов из документа
 def getResults(req, base):
@@ -116,6 +118,14 @@ def getResults(req, base):
         # res.append(i['w'])
         tres.append(max(temp))
     return tres
+
+
+def gIDtoID (gid, b):
+    dic = {}
+    for i in gid:
+        f = "qa" + b[i]['listid'][0]
+        dic.update({f: i})
+    return dic
 
 # переводит список файлов в словарь имя - данные
 def readW2Vbase(files=[]):

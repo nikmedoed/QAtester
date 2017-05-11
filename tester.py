@@ -13,7 +13,7 @@ from stopWordsFilter import stopWfilter
 
 
 machineDirectory = "D:\\BANKI_QA\\Orignals\\"
-testfldr = "tests\\" + "Гот2\\"
+testfldr = "tests\\" # + "Гот2\\"
 
 
 def IdToGroupid (res, base):
@@ -173,7 +173,7 @@ def main():
         ALL = len(base) #При необходимости научиться находить общее число документов при особых запросах, где попали не все
         print()
         ftest = open(testfldr+test, "r", encoding="cp1251")
-        print("Number: ", str(test.index() + 1) + "/" + str(len(test)))
+        print("Number: ", str(allfiles.index(test) + 1) + "/" + str(len(test)))
         print("test", test)
         quer = ftest.readline().replace("\n", "")
         softOR = ftest.readline().replace("\n", "")

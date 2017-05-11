@@ -33,10 +33,11 @@ def maketest(testdata):
         if "set" in c:
             s = c.split(" ")[1:]
             for iter in s:
-                ite = int(iter)
-                k = result[ite - 1]
-                tofile.append(str(k['groupid']))
-                it = ite
+                if iter != "":
+                    ite = int(iter)
+                    k = result[ite - 1]
+                    tofile.append(str(k['groupid']))
+                    it = ite
         else:
             if "goto" in c:
                 it = int(c.split(" ")[1])-1
@@ -57,7 +58,7 @@ def maketest(testdata):
     file = open(testdir + testdata.replace("testdata", "txt"), "w")
     file.write(quer + "\n")
     file.write(softOr + "\n")
-    file.write(stop + "\n\n")
+    file.write(stop + "\n")
     file.write("\n".join(tofile))
     file.close()
 

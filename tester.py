@@ -7,9 +7,10 @@ import datetime
 import rarfile
 from SearchEngine import *
 from Duplicates import baseread
+import timeit
 
 machineDirectory = "D:\\BANKI_QA\\Orignals\\"
-testfldr = "tests\\"
+testfldr = "tests\\" + "Гот\\"
 
 
 def IdToGroupid (res, base):
@@ -79,10 +80,12 @@ def getTest(res, ALL, truRes):
     nDCG10 = 0
     nDCG20 = 0
     nDCG50 = 0
+    MRRpart = 0
     FalsePos = []
-    for i in range(1, len(res)):
+    for k in range(0, len(res)):
+        i = k + 1
         IDCG += 1.0 / log2(i + 1)
-        if res[i - 1] in truRes:
+        if res[k] in truRes:
             TP += 1
             if Cont == 0:
                 MRRpart = 1.0 / i
@@ -104,7 +107,7 @@ def getTest(res, ALL, truRes):
             DCG += fordcg
             APres += forap
         else:
-            FalsePos.append(res[i - 1])
+            FalsePos.append(res[k])
         if i == 5:
             nDCG5 = DCG5 / IDCG
         if i == 10:
@@ -140,44 +143,68 @@ def getTest(res, ALL, truRes):
 def main():
     base = baseread()
     resfile = "Results\\" + str(datetime.datetime.now()).replace(":", "-") + ".txt"
-    file = open(resfile,"w")
-    file.write("Test name\tTruePositive\tPrecision\tRecall\tAccuracy\tError\tF-measure\tAPres@5\t" +
+    file = open(resfile, "w")
+    file.write("Test name\tType\ttimeMin\tReqCou\tGrCou\tMax TP\tsoftOR\tStWdsFlt\tTruePositive\tPrecision\tRecall\tAccuracy\tError\tF-measure\tAPres@5\t" +
                "APres@10\tAPres@20\tAPres@50\tAveragePres\tnDCG@5\tnDCG@10\tnDCG@20\tnDCG@50\t" +
                "nDCG\tMRR\n")
-    globalSres = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    file.close()
+    globalSres = [0] * 17
     coco = 0
-    for test in os.listdir(testfldr):
+    mTP = 0
+    for test in list(filter(lambda x: ('.txt' in x), os.listdir(testfldr)))[0:2]:
+        a = timeit.default_timer()
         coco += 1
-        ALL = len(base) #Todo научиться находить общее число документов при особых запросах
-        ftest = open(testfldr+test)
+        ALL = len(base) #При необходимости научиться находить общее число документов при особых запросах, где попали не все
+        print()
+        ftest = open(testfldr+test, "r", encoding="cp1251")
+        print("test", test)
         quer = ftest.readline().replace("\n", "")
-        softOR =  ftest.readline().replace("\n", "")
+        softOR = ftest.readline().replace("\n", "")
         stopFilter = "True" in ftest.readline()
         ftest.readline()
+        print(quer)
+        print("softOr = ", softOR, "\nstopFilter = ", stopFilter)
         truRes = []
         for line in ftest.readlines():
             truRes.append(line.strip())
+        trc = len(truRes)
+        mTP += trc
 
-        # тест search
-        resul = IdToGroupid (req(quer, softOR, stopFilter), base)
+        # тест инфопоиска
+        greq = req(quer, softOR, stopFilter)
+        resul = IdToGroupid(greq, base)
         # resul состоит из двух элементов 'id' и 'all'
-        res = resul['id']
+        res = list(map(str, resul['id']))
+        rc = len(greq)
+        gc = len(res)
+        print("- True results - count:", trc)
+        print("- Search answers - count:", rc)
+        print("- Search answers - Grouped count:", gc)
+        print("search metric test")
         searchTest = getTest(res, ALL, truRes)
+        print(searchTest)
         for se in range(0, len(searchTest)-1):
             globalSres[se] += searchTest[se]
+        min = (timeit.default_timer() - a) / 60
+        file = open(resfile, "a")
+        file.write('\t'.join(list(map(str, [test, "InfoSearch", min, rc, gc, trc, softOR, stopFilter]))) + "\t")
+        file.write('\t'.join(list(map(lambda x: str(round(x, 4)), searchTest)))+"\n")
+        file.close()
+        print("search test - OK")
+        print("time (min): ", min, "\n")
 
-        file.write(test + "\t")  # testname
-        file.write('\t'.join(searchTest)+"\n")
     if coco > 0:
-        for i in range(0, len(globalSres) - 1):
+        for i in range(0, len(globalSres)):
             globalSres[i] /= coco
     else:
-        for i in range(0, len(globalSres) - 1):
+        for i in range(0, len(globalSres)):
             globalSres[i] = 0
-    file.write("\nGlobal") #testname
-    file.write('\t'.join(globalSres) + "\n")
+
+    file = open(resfile, "a")
+    file.write('\t'.join(list(map(str, ["\nGlobal", "", "", "", "", mTP/coco if coco > 0 else 0, "", ""]))) + "\t")
+    file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSres))) + "\n")
     file.close()
-    print ("Results in " + resfile)
+    print("Results in " + resfile)
 
 if __name__ == '__main__':
     # multiprocessing.freeze_support()

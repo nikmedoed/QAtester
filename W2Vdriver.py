@@ -12,8 +12,7 @@ from Duplicates import baseread
 vectors = "D:\\BANKI_QA\\W2Vo\\Vectors\\"
 W2Vdirectory = "D:\\BANKI_QA\\W2Vo\\"
 
-
-
+# чтение документа с векторами - перевод во внутренее представление
 def readDoc(path):
     f = open (path, "r", encoding="utf8")
     result = []
@@ -36,7 +35,7 @@ def readDoc(path):
                     temp.extend(t)
     return result
 
-
+#выполняет запрос (текстовый) и возвращает список вектором по нему
 def W2Vreq (req):
     file = str(datetime.datetime.now()).replace(":", "-") + "-" + str(len(req)) + ".txt"
     file = file.replace(" ", "_")
@@ -54,12 +53,14 @@ def W2Vreq (req):
     # os.remove(vectors + line)
     return res
 
+# загружает из бинарного файла вектор для документа
 def getVec(file):
     bfile = open(file, "rb")
     base = pickle.load(bfile)
     bfile.close()
     return base
 
+#перевод текстовых файлов с векторами в бинарники
 def refiles():
     files = list(filter(lambda x: ('.hdr' in x), os.listdir(vectors)))
     print (len(files))
@@ -71,7 +72,7 @@ def refiles():
         dump.close()
         os.remove(vectors + line)
 
-
+#вычисление косинусного расстояния между векторами
 def Rcos (a, b):
     c = len(a)
     d = len(b)
@@ -90,15 +91,7 @@ def Rcos (a, b):
         x = x / (y * z)
     return x
 
-
-def readW2Vbase(files=[]):
-    if files == []:
-        files = os.listdir(vectors)
-    res = {}
-    for i in files:
-        res.update({i: getVec(vectors + i)})
-    return res
-
+# сортирует словарь по значению
 def sortDic(dic):
     res = list(sorted(dic.values()))
     res.reverse()
@@ -112,6 +105,7 @@ def sortDic(dic):
                 break
     return result
 
+# получает список веторов из запроса и список векторов из документа
 def getResults(req, base):
     res = []
     tres = []
@@ -123,7 +117,20 @@ def getResults(req, base):
         tres.append(max(temp))
     return tres
 
-def W2VmakeTestComp(req, files = []): # files - это закаченные в память данные из файлов
+# переводит список файлов в словарь имя - данные
+def readW2Vbase(files=[]):
+    if files == []:
+        b = baseread()
+        for i in b:
+            files.append("qa" + i['listid'][0])
+        # files = os.listdir(vectors)
+    res = {}
+    for i in files:
+        res.update({i: getVec(vectors + i)})
+    return res
+
+# files - это закаченные в память данные из файлов
+def W2VmakeTestComp(req, files = []):
     rese = {}
     for a in files:
         base = files.get(a)
@@ -131,7 +138,12 @@ def W2VmakeTestComp(req, files = []): # files - это закаченные в �
     t = sortDic(rese)
     return t
 
+# получает вектор запроса и список имен файлов
 def W2VmakeTest(req, ans):
+    if ans == []:
+        b = baseread()
+        for i in b:
+            ans.append("qa" + i['listid'][0])
     rese = {}
     for a in ans:
         base = getVec(vectors + a)
@@ -139,7 +151,7 @@ def W2VmakeTest(req, ans):
     t = sortDic(rese)
     return t
 
-
+# попытка перегнать все вектора в большой файл
 def tryVecToFile():
     b = baseread()
     base = []
@@ -150,14 +162,12 @@ def tryVecToFile():
     pickle.dump(base, bfile)
     bfile.close()
 
-
 def main():
     req = W2Vreq("Что делать, если потерял карту")
-    ans = os.listdir(vectors)[0:400]
+    ans = os.listdir(vectors)[0:40]
     a = timeit.default_timer()
     print(W2VmakeTest(req, ans))
     print("time", timeit.default_timer()-a)
-
 
 
 if __name__ == '__main__':

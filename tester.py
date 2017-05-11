@@ -9,6 +9,8 @@ from SearchEngine import *
 from Duplicates import baseread
 import timeit
 from W2Vdriver import *
+from stopWordsFilter import stopWfilter
+
 
 machineDirectory = "D:\\BANKI_QA\\Orignals\\"
 testfldr = "tests\\" + "Гот2\\"
@@ -151,10 +153,17 @@ def main():
     file.close()
     globalSres = [0] * 17
     globalSresA = [0] * 17
-    globalSresW = [0] * 17
+    globalSresWa = [0] * 17
+    globalSresWm = [0] * 17
+    globalSresWaS = [0] * 17
+    globalSresWa10 = [0] * 17
+    metods = 5
     coco = 0
     mTP = 0
-    for test in list(filter(lambda x: ('.txt' in x), os.listdir(testfldr))): #[0:4]:
+    allfiles = list(filter(lambda x: ('.txt' in x), os.listdir(testfldr))) #[0:4]
+    allfiles.reverse()
+    gtime = timeit.default_timer()
+    for test in allfiles:
         if "AT" in test:
             flag = "AT: "
         else:
@@ -164,6 +173,7 @@ def main():
         ALL = len(base) #При необходимости научиться находить общее число документов при особых запросах, где попали не все
         print()
         ftest = open(testfldr+test, "r", encoding="cp1251")
+        print("Number: ", str(test.index() + 1) + "/" + str(len(test)))
         print("test", test)
         quer = ftest.readline().replace("\n", "")
         softOR = ftest.readline().replace("\n", "")
@@ -204,38 +214,103 @@ def main():
         print("time (min): ", min, "\n")
 
         c = timeit.default_timer()
-        print("Search + W2V metric test")
+        print("Search + W2V(avg) metric test")
         hDic = gIDtoID(resul['id'], base)
-        res = W2VmakeTest(W2Vreq(quer), hDic.keys())
+        W2Vquer = W2Vreq(quer)
+        h = timeit.default_timer()
+        res = W2VmakeTest(W2Vquer, hDic.keys(), met1)
         res = list(map(hDic.get, res['list']))
         searchTest = getTest(res, ALL, truRes)
         print(searchTest)
         for se in range(0, len(searchTest)):
             globalSres[se] += searchTest[se]
-            globalSresW[se] += searchTest[se]
+            globalSresWa[se] += searchTest[se]
         min = round((b - a + timeit.default_timer() - c) / 60, 2)
         file = open(resfile, "a")
-        file.write('\t'.join(list(map(str, [flag + quer, "InfoSearch&W2V", min, rc, gc, trc, softOR, stopFilter]))) + "\t")
+        file.write('\t'.join(list(map(str, [flag + quer, "InfoSearch&W2V(avg)", min, rc, gc, trc, softOR, stopFilter]))) + "\t")
         file.write('\t'.join(list(map(lambda x: str(round(x, 4)), searchTest)))+"\n")
+        file.close()
+        print("Search + W2V test - OK")
+        print("time (min): ", min, "\n")
+
+        j = timeit.default_timer()
+        print("Search + W2V(avg10) metric test")
+        res = W2VmakeTest(W2Vquer, hDic.keys(), met3)
+        res = list(map(hDic.get, res['list']))
+        searchTest = getTest(res, ALL, truRes)
+        print(searchTest)
+        for se in range(0, len(searchTest)):
+            globalSres[se] += searchTest[se]
+            globalSresWa10[se] += searchTest[se]
+        min = round((b - a + h - c + timeit.default_timer() - j) / 60, 2)
+        file = open(resfile, "a")
+        file.write('\t'.join(list(map(str, [flag + quer, "InfoSearch&W2V(avg10)", min, rc, gc, trc, softOR, stopFilter]))) + "\t")
+        file.write('\t'.join(list(map(lambda x: str(round(x, 4)), searchTest)))+"\n")
+        file.close()
+        print("Search + W2V test - OK")
+        print("time (min): ", min, "\n")
+
+        d = timeit.default_timer()
+        print("Search + W2V(max) metric test")
+        res = W2VmakeTest(W2Vquer, hDic.keys(), met2)
+        res = list(map(hDic.get, res['list']))
+        searchTest = getTest(res, ALL, truRes)
+        print(searchTest)
+        for se in range(0, len(searchTest)):
+            globalSres[se] += searchTest[se]
+            globalSresWm[se] += searchTest[se]
+        min = round((b - a + h - c + timeit.default_timer() - d) / 60, 2)
+        file = open(resfile, "a")
+        file.write('\t'.join(list(map(str, [flag + quer, "InfoSearch&W2V(max)", min, rc, gc, trc, softOR, stopFilter]))) + "\t")
+        file.write('\t'.join(list(map(lambda x: str(round(x, 4)), searchTest)))+"\n")
+        file.close()
+        print("Search + W2V test - OK")
+        print("time (min): ", min, "\n")
+
+
+        e = timeit.default_timer()
+        print("Search + W2V(stopW+avg) metric test")
+        W2Vquer = W2Vreq(stopWfilter(quer))
+        res = W2VmakeTest(W2Vquer, hDic.keys(), met1)
+        res = list(map(hDic.get, res['list']))
+        searchTest = getTest(res, ALL, truRes)
+        print(searchTest)
+        for se in range(0, len(searchTest)):
+            globalSres[se] += searchTest[se]
+            globalSresWaS[se] += searchTest[se]
+        min = round((b - a + timeit.default_timer() - e) / 60, 2)
+        file = open(resfile, "a")
+        file.write('\t'.join(list(map(str, [flag + quer, "InfoSearch&W2V(stopW+avg)", min, rc, gc, trc, softOR, stopFilter]))) + "\t")
+        file.write('\t'.join(list(map(lambda x: str(round(x, 4)), searchTest)))+"\n\n")
         file.close()
         print("Search + W2V test - OK")
         print("time (min): ", min, "\n")
 
     if coco > 0:
         for i in range(0, len(globalSres)):
-            globalSres[i] /= coco * 2
+            globalSres[i] /= coco * metods
             globalSresA[i] /= coco
-            globalSresW[i] /= coco
+            globalSresWa[i] /= coco
+            globalSresWm[i] /= coco
+            globalSresWaS[i] /= coco
+            globalSresWa10[i] /= coco
 
     file = open(resfile, "a")
-    file.write('\t'.join(list(map(str, ["\nGlobal", "", "", "", "", mTP/(coco*2) if coco > 0 else 0, "", ""]))) + "\t")
+    file.write('\t'.join(list(map(str, ["\nGlobal", "", "", "", "", round(mTP/(coco* metods), 4) if coco > 0 else 0, "", ""]))) + "\t")
     file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSres))) + "\n")
-    file.write('\t'.join(list(map(str, ["\nGlobal", "InfoSearch", "", "", "", "", "", ""]))) + "\t")
+    file.write('\t'.join(list(map(str, ["Global", "InfoSearch", "", "", "", "", "", ""]))) + "\t")
     file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSresA))) + "\n")
-    file.write('\t'.join(list(map(str, ["\nGlobal", "InfoSearch&W2V", "", "", "", "", "", ""]))) + "\t")
-    file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSresW))) + "\n")
+    file.write('\t'.join(list(map(str, ["Global", "InfoSearch&W2V(avg)", "", "", "", "", "", ""]))) + "\t")
+    file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSresWa))) + "\n")
+    file.write('\t'.join(list(map(str, ["Global", "InfoSearch&W2V(max)", "", "", "", "", "", ""]))) + "\t")
+    file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSresWm))) + "\n")
+    file.write('\t'.join(list(map(str, ["Global", "InfoSearch&W2V(stopW+avg)", "", "", "", "", "", ""]))) + "\t")
+    file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSresWaS))) + "\n")
+    file.write('\t'.join(list(map(str, ["Global", "InfoSearch&W2V(stopW+avg)", "", "", "", "", "", ""]))) + "\t")
+    file.write('\t'.join(list(map(lambda x: str(round(x, 4)), globalSresWa10))) + "\n")
     file.close()
-    print("Results in " + resfile)
+    print("\nResults in " + resfile)
+    print("Time: ", round((timeit.default_timer() - gtime) / 60, 2))
 
 if __name__ == '__main__':
     # multiprocessing.freeze_support()

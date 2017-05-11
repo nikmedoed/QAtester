@@ -107,8 +107,18 @@ def sortDic(dic):
                 break
     return {"dic": result, 'list': resulten}
 
-# получает список веторов из запроса и список векторов из документа
-def getResults(req, base):
+def met1(temp):
+    return sum(temp) / len(temp)
+
+def met2(temp):
+    return max(temp)
+
+def met3(temp):
+    temp = temp[0:10]
+    return sum(temp) / len(temp)
+
+# получает список векторов из запроса и список векторов из документа
+def getResults(req, base, met):
     res = []
     tres = []
     for i in req:
@@ -116,7 +126,7 @@ def getResults(req, base):
         for j in base:
             temp.append(Rcos(i['vec'], j['vec']))
         # res.append(i['w'])
-        tres.append(max(temp))
+        tres.append(met(temp))
     return tres
 
 
@@ -140,16 +150,16 @@ def readW2Vbase(files=[]):
     return res
 
 # files - это закаченные в память данные из файлов
-def W2VmakeTestComp(req, files = []):
+def W2VmakeTestComp(req, files = [], met = met1):
     rese = {}
     for a in files:
         base = files.get(a)
-        rese.update({a: sum(getResults(req, base))})  # получили суммарное значение по одному документу
+        rese.update({a: sum(getResults(req, base, met))})  # получили суммарное значение по одному документу
     t = sortDic(rese)
     return t
 
 # получает вектор запроса и список имен файлов
-def W2VmakeTest(req, ans):
+def W2VmakeTest(req, ans, met):
     if ans == []:
         b = baseread()
         for i in b:
@@ -157,7 +167,7 @@ def W2VmakeTest(req, ans):
     rese = {}
     for a in ans:
         base = getVec(vectors + a)
-        rese.update({a: sum(getResults(req, base))})  # получили суммарное значение по одному документу
+        rese.update({a: sum(getResults(req, base, met))})  # получили суммарное значение по одному документу
     t = sortDic(rese)
     return t
 
@@ -176,7 +186,7 @@ def main():
     req = W2Vreq("Что делать, если потерял карту")
     ans = os.listdir(vectors)[0:40]
     a = timeit.default_timer()
-    print(W2VmakeTest(req, ans))
+    print(W2VmakeTest(req, ans, met1))
     print("time", timeit.default_timer()-a)
 
 

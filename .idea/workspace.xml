@@ -20,12 +20,14 @@
           <file leaf-file-name="tester.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tester.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+                <state relative-caret-position="-2635">
+                  <caret line="166" column="23" lean-forward="false" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#745#1506#0" expanded="false" />
-                    <element signature="e#1621#1996#0" expanded="false" />
+                    <element signature="e#756#1517#0" expanded="false" />
+                    <element signature="e#1632#2007#0" expanded="false" />
+                    <element signature="e#2045#4152#0" expanded="false" />
+                    <marker date="1494710903748" expanded="true" signature="7038:7113" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -34,7 +36,7 @@
           <file leaf-file-name="makeBase.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/makeBase.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="282">
+                <state relative-caret-position="493">
                   <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
@@ -46,7 +48,7 @@
           <file leaf-file-name="concater.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/concater.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-61">
+                <state relative-caret-position="34">
                   <caret line="5" column="45" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="45" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
@@ -67,22 +69,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="testMAKER.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/testMAKER.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="518">
-                  <caret line="60" column="44" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="44" />
-                  <folding>
-                    <element signature="e#0#20#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="testMakerClient.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/testMakerClient.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
+                <state relative-caret-position="1020">
                   <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#13#0" expanded="true" />
@@ -120,25 +110,25 @@
           <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tester.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1603">
-                  <caret line="221" column="42" lean-forward="false" selection-start-line="221" selection-start-column="42" selection-end-line="221" selection-end-column="42" />
+                <state relative-caret-position="1666">
+                  <caret line="128" column="39" lean-forward="false" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#1621#1996#0" expanded="false" />
-                    <marker date="1494481248390" expanded="true" signature="4154:11886" ph="..." />
-                    <marker date="1494481248390" expanded="true" signature="4966:9448" ph="..." />
-                    <marker date="1494481248390" expanded="true" signature="10337:10531" ph="..." />
-                    <marker date="1494481248390" expanded="true" signature="10381:10531" ph="..." />
+                    <element signature="e#756#1517#0" expanded="false" />
+                    <element signature="e#1632#2007#0" expanded="false" />
+                    <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+                    <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+                    <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="W2Vdriver.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="W2Vdriver.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/W2Vdriver.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="122" column="13" lean-forward="false" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+                <state relative-caret-position="935">
+                  <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                     <element signature="e#353#953#0" expanded="false" />
@@ -156,7 +146,7 @@
           <file leaf-file-name="Duplicates.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Duplicates.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
+                <state relative-caret-position="561">
                   <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="37" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
@@ -168,10 +158,22 @@
           <file leaf-file-name="stopWordsFilter.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/stopWordsFilter.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
+                <state relative-caret-position="323">
                   <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#33#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="testMAKER.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/testMAKER.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="59">
+                  <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#0#20#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -238,14 +240,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1913" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -258,28 +259,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QAtester" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.2 (D:\Users\sirne\Anaconda3\python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -464,10 +444,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.tester" />
-        <item index="1" class="java.lang.String" itemvalue="Python.stopWordsFilter" />
-        <item index="2" class="java.lang.String" itemvalue="Python.W2Vdriver" />
-        <item index="3" class="java.lang.String" itemvalue="Python.testMakerClient" />
-        <item index="4" class="java.lang.String" itemvalue="Python.testDumper" />
+        <item index="1" class="java.lang.String" itemvalue="Python.testDumper" />
+        <item index="2" class="java.lang.String" itemvalue="Python.stopWordsFilter" />
+        <item index="3" class="java.lang.String" itemvalue="Python.W2Vdriver" />
+        <item index="4" class="java.lang.String" itemvalue="Python.testMakerClient" />
       </list>
     </recent_temporary>
   </component>
@@ -488,19 +468,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="1913" y="0" width="974" height="1047" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1444563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49562362" sideWeight="0.50437635" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2751896" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27789935" sideWeight="0.4914712" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2751896" sideWeight="0.49562362" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934355" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -570,7 +549,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="84" />
+      <option name="time" value="85" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -579,6 +558,41 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Duplicates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stopWordsFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3145">
+          <caret line="215" column="21" lean-forward="false" selection-start-line="215" selection-start-column="21" selection-end-line="215" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Duplicates.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -655,8 +669,11 @@
           <caret line="165" column="28" lean-forward="false" selection-start-line="165" selection-start-column="28" selection-end-line="165" selection-end-column="28" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
           </folding>
         </state>
       </provider>
@@ -677,8 +694,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
           </folding>
         </state>
       </provider>
@@ -759,8 +779,11 @@
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
           </folding>
         </state>
       </provider>
@@ -831,8 +854,11 @@
           <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
           </folding>
         </state>
       </provider>
@@ -863,8 +889,11 @@
           <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
           </folding>
         </state>
       </provider>
@@ -895,8 +924,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
           </folding>
         </state>
       </provider>
@@ -907,8 +939,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
           </folding>
         </state>
       </provider>
@@ -924,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="774" column="0" lean-forward="false" selection-start-line="733" selection-start-column="0" selection-end-line="775" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,7 +975,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concater.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
+        <state relative-caret-position="34">
           <caret line="5" column="45" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="45" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -949,25 +983,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testDumper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Users/sirne/Anaconda3/Lib/encodings/cp1251.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/makeBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="493">
           <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="27" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -975,32 +1000,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testMakerClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="1020">
           <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Duplicates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="37" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1015,30 +1020,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testMAKER.py">
+    <entry file="file://$PROJECT_DIR$/testDumper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="60" column="44" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stopWordsFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/W2Vdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="122" column="13" lean-forward="false" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        <state relative-caret-position="935">
+          <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="32" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#353#953#0" expanded="false" />
@@ -1052,14 +1045,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tester.py">
+    <entry file="file://$PROJECT_DIR$/Duplicates.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+        <state relative-caret-position="561">
+          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="37" selection-end-column="17" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#745#1506#0" expanded="false" />
-            <element signature="e#1621#1996#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stopWordsFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="128" column="39" lean-forward="false" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#756#1517#0" expanded="false" />
+            <element signature="e#1632#2007#0" expanded="false" />
+            <marker date="1494710903748" expanded="true" signature="5081:10827" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11699:11968" ph="..." />
+            <marker date="1494710903748" expanded="true" signature="11743:11968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testMAKER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
